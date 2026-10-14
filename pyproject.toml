@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "build-lymphoma-bed-files"
+version = "2.0.0"
+description = "Build the athena exons file and panel BED for the lymphoma (gaea) assay"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=1.5",
+]
+
+[project.scripts]
+build-gaea-beds = "build_gaea_beds:main"
+
+[tool.setuptools]
+py-modules = ["build_gaea_beds"]
